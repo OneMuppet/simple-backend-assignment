@@ -4,7 +4,7 @@ export default {
     events: [
       {
         httpApi: {
-          path: '/brands',
+          path: '/brands/{brand}',
           method: 'get',
         },
       },

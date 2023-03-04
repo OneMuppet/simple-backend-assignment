@@ -20,6 +20,8 @@ const statements = [
     Effect: 'Allow',
     Action: [
       'dynamodb:UpdateItem',
+      'dynamodb:Scan',
+      'dynamodb:Query',
     ],
     Resource: 'arn:aws:dynamodb:*:*:table/${self:provider.environment.ASSET_NAME}',
   },

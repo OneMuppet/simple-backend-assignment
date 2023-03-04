@@ -1,8 +1,9 @@
 import { incrementBrand } from '../libs/brandRepo';
 
-export const handler = async (event: AWSLambda.SQSEvent): Promise<null> => {
+export const handler = async (event: AWSLambda.SQSEvent): Promise<void> => {
   console.log(event);
-  const result = await incrementBrand('Volvo', 1);
-  console.log(result);
-  return;
+  for (const record of event.Records) {
+    const result = await incrementBrand(record.body, 1);
+    console.log(result);
+  }
 };
