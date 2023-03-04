@@ -1,4 +1,7 @@
-import { UpdateCommand, UpdateCommandOutput, ScanCommand, QueryCommand, QueryCommandOutput, ScanCommandOutput } from '@aws-sdk/lib-dynamodb';
+import {
+  UpdateCommand, UpdateCommandOutput,
+  ScanCommand, QueryCommand, QueryCommandOutput, ScanCommandOutput,
+} from '@aws-sdk/lib-dynamodb';
 import { ddbDocClient } from '@/functions/libs/dynamodb';
 
 export const incrementBrand = async (brand: string, increment: number): Promise<UpdateCommandOutput> => {
