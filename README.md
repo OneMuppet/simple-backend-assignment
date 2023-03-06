@@ -51,11 +51,14 @@ This service provides backend API functionality for the brand counter service.
 
 ### Simple deployment
 
+- Set the `profile` property in `/serverless.ts` to the name of the AWS profile you want to use for deployment.
 - run `npm run deploy:test` or `npm run deploy:prod`
   <br /><br />
 
 ### CodeBuild deployment
+
 <i>Use this for automatic builds for each push to the `main`-branch</i>
+
 - Go to CodeBuild on the account where you want to deploy this service
 - Fill out `name` and `description`
 - Check `Build badge`

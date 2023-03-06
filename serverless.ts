@@ -19,7 +19,7 @@ const serverlessConfiguration: AWS = {
   },
   plugins: ['serverless-esbuild', 'serverless-offline', 'serverless-prune-versions'],
   provider: {
-    profile: 'tq.rnd',
+    profile: 'todo-set-to-aws-profile',
     region: 'eu-north-1',
     architecture: 'arm64',
     httpApi: {
