@@ -10,6 +10,9 @@
 
 <br />
 
+## 🗺️ Solution overview
+<img src="./architecture.jpg" />
+
 ## 🧱 Build/deploy status
 
 ![Build Status TEST](todo-add-build-badge-for-test-here)
