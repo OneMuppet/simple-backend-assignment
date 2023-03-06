@@ -8,6 +8,12 @@ export default {
           method: 'get',
         },
       },
+      {
+        httpApi: {
+          path: '/brands',
+          method: 'get',
+        },
+      },
     ],
   },
   'brand-file-processor': {

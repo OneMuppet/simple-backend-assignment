@@ -24,7 +24,7 @@ export const incrementBrand = async (brand: string, increment: number): Promise<
     console.log('Success - item added or updated', data);
     return data;
   } catch (err) {
-    console.log('Error', err);
+    console.log('Error when incrementing', err);
   }
 };
 

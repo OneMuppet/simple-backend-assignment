@@ -37,10 +37,10 @@ const serverlessConfiguration: AWS = {
       // },
     },
     deploymentBucket: {
-      name: '${file(config/env.yml):${self:provider.stage}.AWS_ACCOUNT}.eu-north-1serverless.deploys',
+      name: '${file(config/env.yml):${self:provider.stage}.AWS_ACCOUNT}.eu-north-1.serverless.deploys',
     },
     name: 'aws',
-    runtime: 'nodejs16.x',
+    runtime: 'nodejs18.x',
     stage: '${opt:stage, "test"}',
     apiGateway: {
       minimumCompressionSize: 1024,
