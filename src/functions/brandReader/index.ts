@@ -6,12 +6,12 @@ export const handler = async (event: AWSLambda.APIGatewayEvent): Promise<AWSLamb
   if (event.pathParameters?.brand) {
     // Get specific brand
     console.log(`Getting brand ${event.pathParameters.brand}`);
-    const data = await readBrand(event.pathParameters.brand);
-    return ok(data.Items[0]);
+    const brand = await readBrand(event.pathParameters.brand);
+    return ok(brand);
   } else {
     // Get All Brands
     console.log('Getting ALL brands');
-    const data = await readBrands();
-    return ok(data.Items);
+    const brands = await readBrands();
+    return ok(brands);
   }
 };

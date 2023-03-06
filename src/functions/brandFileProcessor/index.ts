@@ -3,7 +3,7 @@ import { sendMessages } from '../libs/sqs';
 
 export const handler = async (event: AWSLambda.S3Event): Promise<void> => {
   for (const record of event.Records) {
-    console.log(record.s3?.object.key);
+    console.log(`New S3 file uploaded. Key: ${record.s3?.object.key}`);
     try {
       const brands = await getBrandsFromS3(record);
       await sendMessages(brands);

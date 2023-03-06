@@ -16,8 +16,9 @@ export const getBrandsFromS3 = async (record: S3EventRecord): Promise<string[]> 
 
     const hasLettersRegex = /[a-zA-Z]/g;
     const brands = rows.filter(r => hasLettersRegex.test(r));
+    console.log(`Found these brands in the file ${brands.join(', ')}`);
     return brands;
-  } catch (err) {
-    console.error(err);
+  } catch (ex) {
+    console.error(`Error when processing file from S3 ${ex.message}`);
   }
 };
